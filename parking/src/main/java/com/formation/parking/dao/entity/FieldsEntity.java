@@ -1,17 +1,25 @@
 package com.formation.parking.dao.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class FieldsEntity {
 
+	@JsonProperty( value ="idobj")
 	private String idObj;
 	
+	@JsonProperty( value ="grp_nom")
 	private String grpNom;
 	
+	@JsonProperty( value ="grp_exploitation")
 	private String grpExploitation;
 	
+	@JsonProperty( value ="grp_disponible")
 	private String grpDisponible;
 	
+	@JsonProperty( value ="grp_statut")
 	private String grpStatut;
 	
+	@JsonProperty( value ="grp_horodatage")
 	private String grpHorodatage;
 
 	public String getIdObj() {
