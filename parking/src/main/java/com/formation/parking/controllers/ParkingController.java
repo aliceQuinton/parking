@@ -3,6 +3,7 @@ package com.formation.parking.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +25,8 @@ public class ParkingController {
 	@Autowired
 	private ParkingService parkingService;
 	
+	//annotation qui autorise la communication avec localhost 4200
+	@CrossOrigin("http://localhost:4200")
 	@RequestMapping(path = "/api/parkings", method = RequestMethod.GET)
 	// premier paramètre, chemin de l'URI ici /api/parkings, second ici on peut lui indiquer la méthode qu'on souhaite utiliser
 	// sur cette URI . Si on fait un POST sur cette URL là le serveur ne répondra rien. donc uniquement du get ici.
